@@ -1,0 +1,28 @@
+version: '2.0'
+services:  
+  amuseme-backend:
+    build: 
+      context: ./zti-AMuseMe-backend
+      dockerfile:  Dockerfile
+    image: amuseme-backend:latest
+    container_name: amuseme-backend
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - backend
+
+  amuseme-frontend:
+    build: ./zti-AMuseMe-frontend
+    image: amuseme-frontend:latest
+    container_name: amuseme-frontend
+    ports:
+      - 3000:3000
+    depends_on:
+      - amuseme-backend
+    networks: 
+      - frontend     
+  
+networks: 
+  backend:
+  frontend:
