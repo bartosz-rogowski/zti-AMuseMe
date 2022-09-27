@@ -120,8 +120,8 @@ Authentification and authorization are handled with the JWT token logic.
 ## 6. Client part <a name="client"></a>
 
 Single page application was written in Vue.js with [Bulma](https://bulma.io/)'s help (for styling). 
-All data about music records and artists is provided within MusicBrainz API. The only field needed for getting details about specific release is its identificator - MBID. Thereby other information are not necessary to be stored in the database.
-In order to enhance visual representation, the Cover Art Archive API is used to retrieve albums' covers. It is compatible with MusicBrainz so that a cover can be fetched with use of MBID.
+All data about music records and artists is provided within [MusicBrainz API](https://musicbrainz.org/doc/MusicBrainz_API). The only field needed for getting details about specific release is its identificator - MBID. Thereby other information are not necessary to be stored in the database.
+In order to enhance visual representation, the [Cover Art Archive API](https://coverartarchive.org/) is used to retrieve albums' covers. It is compatible with MusicBrainz so that a cover can be fetched with use of MBID.
 Moreover, artists' images are fetched from Wikipedia (artist's name page) so it is possible that it will *not* properly present a given artist.
 
 The structure of this part is presented below.
